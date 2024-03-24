@@ -100,7 +100,6 @@ For Mac and Linux OS, we need to use a Python module called "Esptool" to flash b
    
    <br/>
    
-   <br/>
    (for ESP32S3_DEVKITC_V1)
    
    `% esptool.py -p "/dev/cu.usbserial-0001" -b 460800 --before default_reset --after hard_reset --chip esp32s3 write_flash -z --flash_mode dio --flash_size 8MB --flash_freq 80m 0x0000 firmwares/ESP32S3_DEVKITC_V1/bootloader_qio_80m.bin 0x8000 firmwares/ESP32S3_DEVKITC_V1/partitions.bin 0xe000 firmwares/ESP32S3_DEVKITC_V1/boot_app0.bin 0x10000 firmwares/ESP32S3_DEVKITC_V1/firmware.bin`
