@@ -34,7 +34,7 @@ With MataVision, anyone can unlock the potential of computer vision in their pro
 
 #### (Supported boards)
 
-<img title="ESP32-CAM Boards" src="images/esp32_cam_boards.png" alt="" width="150"><img title="ESP32-S3 Boards" src="images/esp32_s3_boards.png" alt="" width="160">
+<img title="ESP32-CAM Boards" src="images/esp32_cam_boards.png" alt="" width="150"><img title="ESP32-S3 Boards" src="images/esp32_s3_boards.png" alt="" width="155">
 
 - ESP32-CAM (4MB flash, 520KB RAM, 4MB PSRAM).
 - ESP32-DevKitV1 (4MB flash, 520KB RAM).
