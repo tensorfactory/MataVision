@@ -1,16 +1,17 @@
 # MataVision (Your Affordable Edge-Based Vision Sensor)
 
 ## Overview
-Supercharge your projects with MataVision, the low-cost, easy-to-use vision sensor that empowers your electronics with the power of sight.
+Supercharge your projects with MataVision, a powerful vision system that combines easy-to-use hardware and a user-friendly mobile app. At its core, MataVision consists of two parts:
 
-Building on the simplicity of traditional sensors, MataVision leverages the processing capabilities of the ESP32-CAM or ESP32-S3 boards to bring computer vision to your projects at a fraction of the cost of complex camera systems.
-
-Seamless integration, just like any other sensor, MataVision provides visual data for real-world applications.
+- MataVision Firmware: This lightweight firmware is flashed onto your ESP32-CAM or ESP32-S3 board, transforming it into a powerful vision sensor.
+- MataVision iOS App: This intuitive app acts as your command center, allowing you to train your vision system, define object detection parameters, and control outputs seamlessly.
+Together, MataVision's hardware and software empower you to bring computer vision to your projects at a fraction of the cost of complex camera systems.
 
 Here's what MataVision can do for you:
 
-Multiple Windows Image Classification: Train MataVision to recognize specific objects or scenes, ideal for applications like product sorting, state-change and anomaly detection.
-Single Object Tracking: Track the movement of object in real-time, perfect for motion detection, or autonomous systems.
+- Multiple Windows Image Classification: Train MataVision to recognize specific objects or scenes, ideal for applications like product sorting, state-change and anomaly detection.
+- Single Object Tracking: Track the movement of object in real-time, perfect for motion detection, or autonomous systems.
+
 The possibilities are endless! Here are some inspiring applications for MataVision across various industries:
 
 Smart Homes & Retail:
@@ -21,13 +22,6 @@ Industrial Automation:
 Automate quality control by training MataVision to detect mixings, wrong orientations or missing components in products.
 Perform remote sensing in hazardous or cramped environments where direct-contact sensing is not possible.
 Enhance safety with real-time monitoring of machinery activity.
-
-Our user-friendly iOS app empowers you to:
-
-Train your vision system with ease by collecting and categorizing images.
-Define object boundaries using intuitive drawing tools for object detections.
-Control your vision output through various methods like GPIO pins, I2C, Cloud or Display for maximum flexibility.
-You can even incorporate data from other sensors via I2C or trigger a motor motion using the built-in IOs tools.
 
 With MataVision, anyone can unlock the potential of computer vision in their projects.
 
@@ -40,7 +34,7 @@ With MataVision, anyone can unlock the potential of computer vision in their pro
 - ESL32S3-DevkitC-1-N8R8 (8MB flash, 512KB RAM, 8MB PSRAM).
 
 
-# Firmware Installation
+## Firmware Installation
 
 Go to the [firmware folder](https://github.com/tensorfactory/MataVision/tree/main/firmwares) of the ESP board to download the required firmware package. It consists of 4 files (bootloader.bin, partition-table.bin, boot_app0.bin, and firmware.bin). Please choose the right setting according to the ESP chip type for the flashing process.
 
@@ -108,11 +102,11 @@ After successfully flashing firmware to the ESP device, hard reboot it. If every
 
 <br/><br/>
 
-# iOS App
+## iOS App
 
 <img title="MataVision app's icon." src="images/app_icon.png" alt="" width="130">
 
-This iOS app plays a central role in the MataVision system. It is responsible for managing ESP devices and developing and deployment of applications.
+This iOS app plays a central role in the MataVision system. It is responsible for managing ESP32 devices, collecting and categorizing images for vision training, composes programs that control how values from inputs can be combined logically and arithmetically to trigger outputs.  
 
 - ESP Devices Management.   
    - [Devices Discovery](#devices-discovery).
