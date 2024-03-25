@@ -4,7 +4,7 @@
 Supercharge your projects with MataVision, a powerful vision system that combines easy-to-use hardware and a user-friendly mobile app. At its core, MataVision consists of two parts:
 
 - MataVision [Firmware](#firmware-installation): This lightweight firmware is flashed onto your ESP32-CAM or ESP32-S3 board, transforming it into a powerful vision sensor.
-- MataVision iOS App: This intuitive app acts as your command center, allowing you to train your vision system, define object detection parameters, and control outputs seamlessly.
+- MataVision [iOS App](#ios-app): This intuitive app acts as your command center, allowing you to train your vision system, define object detection parameters, and control outputs seamlessly.
 Together, MataVision's hardware and software empower you to bring computer vision to your projects at a fraction of the cost of complex camera systems.
 
 Here's what MataVision can do for you:
@@ -105,7 +105,15 @@ After successfully flashing firmware to the ESP device, hard reboot it. If every
 ## iOS App
 
 <img title="MataVision app's icon." src="images/app_icon.png" alt="" width="130">
+The MataVision iOS app is available for download on the Apple App Store. This app serves as your central hub for everything related to MataVision, from managing ESP32 devices to development, debugging, and deployment of your vision applications.
 
+A typical workflow starts with connecting to an ESP32 device running the MataVision firmware. You'll then set up the camera and begin capturing images for your vision tasks.
+
+Next comes defining the vision inputs. These inputs, which provide data for your program, can be for tasks like image classification or object tracking. Each input can have one or more values. For example, a cat-or-dog classification might have two boolean values ("is_a_dog" and "is_a_cat") and one integer value ("class_index"). You can also add non-vision inputs like GPIOs, I2C, and Cloud services if needed.
+
+After defining the inputs, you'll set up the corresponding outputs. Once you have all the inputs and outputs prepared, you can start writing a program that links them together and upload it to your ESP32 device.
+
+This section will provide a step-by-step guide on how to perform all these tasks.
 - ESP Devices Management.   
    - [Devices Discovery](#devices-discovery).
    - [Device Setting](#device-setting).
@@ -120,7 +128,7 @@ After successfully flashing firmware to the ESP device, hard reboot it. If every
 
 <br/>
 
-## Devices Discovery
+### Devices Discovery
 <img title="iOS main btn 1." src="images/iOS_main_btn1.png" alt="" width="200">
 
 Press the "Device discovery" button on the main page to access the device list. All ESP devices connected to the same WiFi network as the iOS app will appear on this page. 
