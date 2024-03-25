@@ -42,15 +42,15 @@ With MataVision, anyone can unlock the potential of computer vision in their pro
 
 # Firmware Installation
 
-Go to the [firmware folder](https://github.com/tensorfactory/MataVision/tree/main/firmwares) of the ESP board to download the required firmware package. It consists of 4 files (bootloader_xxx_xxm.bin, partitions.bin, boot_app0.bin, and firmware.bin). Please choose the right setting according to the ESP chip type for the flashing process.
+Go to the [firmware folder](https://github.com/tensorfactory/MataVision/tree/main/firmwares) of the ESP board to download the required firmware package. It consists of 4 files (bootloader.bin, partition-table.bin, boot_app0.bin, and firmware.bin). Please choose the right setting according to the ESP chip type for the flashing process.
 
 
 <br/>
 
 | Filename               | Offset address (ESP32) | Offset address (ESP32S3) |
 | ---------------------- |:----------------------:|:------------------------:|
-| bootloader_xxx_xxm.bin | 0x1000                 | 0x0000                   |
-| partitions.bin         | 0x8000                 | 0x8000                   |
+| bootloader.bin         | 0x1000                 | 0x0000                   |
+| partition-table.bin    | 0x8000                 | 0x8000                   |
 | boot_app0.bin          | 0xe000                 | 0xe000                   |
 | firmware.bin           | 0x10000                | 0x10000                  |
 
@@ -68,7 +68,7 @@ Go to the [firmware folder](https://github.com/tensorfactory/MataVision/tree/mai
 
 We can use the "Flash Download Tools" from [Espressif](https://www.espressif.com/en/support/download/other-tools) to flash firmware bin files to an ESP device. Please follow the below steps for firmware flashing.
 
-1. Connect an ESP device to a computer via USB. The connected port number can be found using Windows' "Device Manager". In this example, the ESP device was connected to COM17. (Note: For some ESP devices, we need to hold the BOOT button when powering ON to start in BOOT mode for firmware flashing.)
+1. Connect an ESP device to a computer via USB. The connected port number can be found using Windows' "Device Manager". In this example, the ESP device was connected to COM3. (Note: For some ESP devices, we need to hold the BOOT button when powering ON to start in BOOT mode for firmware flashing.)
    
    <img title="Device Manager." src="images/device_manager.png" alt="" width="300">
 
