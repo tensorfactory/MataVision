@@ -110,6 +110,144 @@ After successfully flashing firmware to the ESP device, hard reboot it. If every
 
 # iOS App
 
+<img title="MataVision app's icon." src="images/app_icon.png" alt="" width="130">
+
+This iOS app plays a central role in the MataVision system. It is responsible for managing ESP devices and developing and deployment of applications.
+
+- ESP Devices Management.   
+   - [Devices Discovery](#devices-discovery).
+   - [Device Setting](#device-setting).
+   - [Camera Setting](#camera-setting).
+   - [Camera Viewing](#camera-viewing).
+   - [Image Capturing](#image-capturing).
+- Applications Development.
+   - [Create IOs](#create-ios).
+   - [Create Program](#create-program).
+   - [Upload Program](#upload-program).
+
+
+<br/>
+
+## Devices Discovery
+<img title="iOS main btn 1." src="images/iOS_main_btn1.png" alt="" width="200">
+
+Press the "Device discovery" button on the main page to access the device list. All ESP devices connected to the same WiFi network as the iOS app will appear on this page. 
+For connection to ESP devices running in AP mode (default), the iOS device needs to login to the AP network, which appears as esp32_XXX and has a default passphrase of "12345678".
+
+<img title="available device." src="images/devices_page01.png" alt="" width="200">
+
+In this case, the esp device's AP SSID (also the device's name) is esp32_336. Its IP address on the AP network is 192.168.1.1. The symbol <img title="" src="images/connected_icon.png" alt="" width="20"> / <img title="" src="images/disconnected_icon.png" alt="" width="20"> beside each device indicates the current connection status. Pressing the refresh button <img title="" src="images/refresh_btn.png" alt="" width="30"> at the bottom will trigger a refresh to the device list and connection states. Next, long press on the device's name to open the "device setting" page.
+<br/>
+
+___
+**NOTE**<br/>
+The basic version of this iOS app only supports displaying a maximum of one ESP device at a time. Upgrading to the pro version will remove this limitation.
+___
+
+<br/>
+
+## Device Setting
+
+### (Device setting window)
+<img title="Device setting window." src="images/device_setting_page1_2.png" alt="" width="500">
+
+The first line is the ESP device type and version number. You can replace the default AP SSID (also the device name) and passphrase with a more meaningful and secure value.
+For this example, set the WiFi availability to true and enter the SSID and passphrase of your WiFi network. Set the GMT offset of your local time in minutes. 
+
+The default status LED GPIO number is 33, which is the built-in LED of ESP32-CAM. This LED is at the bottom surface of the board, which is not very visible. Change the GPIO number to 14 and the LED type to RGB WS2812B, as shown in App-Demo-Kit's circuit diagram. Before saving the changes, let's briefly review the events logging.
+
+<img title="Events log window." src="images/device_setting_page3.png" alt="" width="250">
+
+At this moment, the ESP device does not have access to the NTP time server to retrieve the current time. Once an internet connection is available, a timestamp (DD HH:MM:SS) will be placed at the beginning of each event log.  
+The (E) and (I) indicate error or information type of event.
+
+___
+**NOTE**<br/>
+The events log does not refresh automatically. Press the reload button <img title="" src="images/reload_btn.png" alt="" width="20"> to retrieve the latest logs.
+___
+
+Now, press the save button <img title="" src="images/save_btn.png" alt="" width="30"> at the bottom to save these changes to the remote ESP device. The remote device will reboot with the new settings and log in to your WiFi network.
+
+___
+**NOTE**<br/>
+Sometimes the remote device does not behave accordingly after the setting change. The attached camera failed to start, or the status LED blinked unpredictably. In these situations, fully power-down the device for more than 10 seconds should fix the problem.
+___
+<img title="" src="images/operation_mode_switch.png" alt="" width="200">
+
+This button switches the ESP device between operation and setting modes. In operation mode, the ESP device will run the uploaded program after a restart. If none is available or an error has occurred, it will revert to setting mode.
+
+<br/>
+
+<img title="" src="images/update_btn.png" alt="" width="80">
+
+This button will be visible when new firmware is available for the ESP device. Pressing the button will start firmware uploading to the ESP device. 
+This process will only work in AP mode. Switch the ESP device to AP mode and connect the iOS device directly to the AP network before starting.
+This process will take several minutes. During this process, please do not press any buttons. 
+___
+**NOTE**<br/>
+If the progress bar is stagnant for more than 10 seconds, the firmware update has encountered an error. Please restart the remote device and try again.
+___
+
+<br/>
+
+<img title="" src="images/reset_btn.png" alt="" width="80">
+
+Pressing this button will reset the remote ESP device. All settings and the existing program will be deleted.
+
+<br/>
+
+### (Camera setting window)
+<img title="Camera setting window." src="images/device_setting_page4.png" alt="" width="200">
+
+For ESP32CAM or ESP32S3 devices, there is an option to add/enable a camera.
+
+- <img title="" src="images/peri_neg_cam_btn.png" alt="" width="20"> / <img title="" src="images/peri_pos_cam_btn.png" alt="" width="20">  This icon indicates availability of camera (Gray = no / Black = yes).
+
+- <img title="" src="images/peri_add_cam_btn.png" alt="" width="20"> For ESP32S3 devices, there is an option to add a camera. Press this button to enter the camera's setting page.
+
+- <img title="" src="images/peri_camera_play_btn.png" alt="" width="20"> Press this button to enter the camera's view page.
+
+- <img title="" src="images/peri_camera_edit_btn.png" alt="" width="20"> Press this button to enter the camera's setting page.
+
+- <img title="" src="images/peri_camera_remove_btn.png" alt="" width="20"> Delete the camera. (Note: This doesn't work for ESP32-CAM as the camera is built onto the board.)
+
+- <img title="" src="images/peri_camera_switch_btn.png" alt="" width="20"> Turn ON or OFF the camera.
+
+<br/>
+
+## Camera Setting <a name="camera-setting"></a><img title="" src="images/peri_add_cam_btn.png" alt="" width="30"> <img title="" src="images/peri_camera_edit_btn.png" alt="" width="30"> 
+
+<img title="Camera setting." src="images/esp32cam_camera_setting.png" alt="" width="450"> 
+
+For the built-in camera of ESP32-CAM, all pins from D0 to SCL are read-only. You may want to change the V-flip or H-mirror settings to suit your setup. The rest of the parameters are already optimized for this built-in camera. 
+
+___
+**NOTE**<br/>
+After making any changes, remember to go to the device setting page and press the save button to upload those changes.
+___
+
+<br/>
+
+## Camera Viewing <a name="camera-viewing"></a><img title="" src="images/peri_camera_play_btn.png" alt="" width="30"> 
+
+<img title="Camera viewing." src="images/esp32cam_camera_view_reduced.png" alt="" width="500"> 
+
+In this example (left image), the camera view was upside-down. Press the gear icon at the top right to open the camera's setting page and turn ON the V-flipped setting to rectify this. The right image shows the camera's flashlight toggled ON/OFF by pressing the flashlight button.
+
+<br/>
+
+## Image Capturing
+<img title="Image capturing." src="images/esp32cam_image_capturing_reduced.png" alt="" width="600"> 
+
+Before we capture any image, we need to define a window in the camera's view. Press the plus button at the bottom left to create a window. Adjust the window size by moving the slider and dragging the window to the desired position, as shown in the 2nd image.<br/>
+While selecting the window, press the shuttle button to capture an image. All images captured will be placed in the window folder. The number at the top right of the window folder is the image count.<br/>
+Pressing the plus button again will create another window. Each window will be named W0, W1, ..., up to W9. While selecting any window and pressing the shuttle button, an image will be captured for that window. Finally, to view or delete those images of a window, long press on the window's folder to open the folder.
+___
+**NOTE**<br/>
+It is not allowed to change the size or position of a window that contains images.
+___
+<br/>
+
 
 
 ## Simple logic instructions(SLI)
