@@ -14,11 +14,11 @@ Here's what MataVision can do for you:
 
 The possibilities are endless! Here are some inspiring applications for MataVision across various industries:
 
-Smart Homes & Retail:
+- Smart Homes & Retail:
 Detect an empty cat's bowl, parcels at the doorstep or door that is not fully closed.
 Auto alert salesperson of customer presence or empty shelf.
 
-Industrial Automation:
+- Industrial Automation:
 Automate quality control by training MataVision to detect mixings, wrong orientations or missing components in products.
 Perform remote sensing in hazardous or cramped environments where direct-contact sensing is not possible.
 Enhance safety with real-time monitoring of machinery activity.
@@ -36,7 +36,7 @@ With MataVision, anyone can unlock the potential of computer vision in their pro
 
 ## Firmware Installation
 
-Go to the [firmware folder](https://github.com/tensorfactory/MataVision/tree/main/firmwares) of the ESP board to download the required firmware package. It consists of 4 files (bootloader.bin, partition-table.bin, boot_app0.bin, and firmware.bin). Please choose the right setting according to the ESP chip type for the flashing process.
+Firmware package can be downloaded from [folder](https://github.com/tensorfactory/MataVision/tree/main/firmwares). It consists of 4 files (bootloader.bin, partition-table.bin, boot_app0.bin, and firmware.bin). Please choose the right setting according to the ESP chip type for the flashing process.
 
 
 <br/>
@@ -105,8 +105,6 @@ After successfully flashing firmware to the ESP device, hard reboot it. If every
 ## iOS App
 
 <img title="MataVision app's icon." src="images/app_icon.png" alt="" width="130">
-
-This iOS app plays a central role in the MataVision system. It is responsible for managing ESP32 devices, collecting and categorizing images for vision training, composes programs that control how values from inputs can be combined logically and arithmetically to trigger outputs.  
 
 - ESP Devices Management.   
    - [Devices Discovery](#devices-discovery).
