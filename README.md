@@ -3,7 +3,7 @@
 ## Overview
 Supercharge your projects with MataVision, a powerful vision system that combines easy-to-use hardware and a user-friendly mobile app. At its core, MataVision consists of two parts:
 
-- MataVision Firmware: This lightweight firmware is flashed onto your ESP32-CAM or ESP32-S3 board, transforming it into a powerful vision sensor.
+- MataVision [Firmware](#firmware-installation): This lightweight firmware is flashed onto your ESP32-CAM or ESP32-S3 board, transforming it into a powerful vision sensor.
 - MataVision iOS App: This intuitive app acts as your command center, allowing you to train your vision system, define object detection parameters, and control outputs seamlessly.
 Together, MataVision's hardware and software empower you to bring computer vision to your projects at a fraction of the cost of complex camera systems.
 
