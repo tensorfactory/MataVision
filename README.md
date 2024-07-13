@@ -32,8 +32,6 @@
    - [Classification](#classification).
    - [Object Tracking](#object-tracking).
    - [GPIOs](#gpios).
-   - [Variables](#variables).
-   - [Image Classification](#image-classification).
    - [I2C Master](#i2c-master).
    - [I2C Slave](#i2c-slave).
    - [JSON Server](#json-server).
