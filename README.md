@@ -469,7 +469,7 @@ Initially, the date and time of the DS3231 will not be correct. To fix this, pre
 
 The following sections will be refering to the above App Demo Kit.
 
-## Create I/O Objects
+## Create I/O Objects <a name="create-i-o-objects"></a>
 
 <img title="iOS main btn 3." src="images/browser_io_btn.png" alt="" width="223"> <img title="IO types." src="images/digital_io_icons.png" alt="" width="193">
 
@@ -538,7 +538,7 @@ ___
 
 <br/>
 
-## I/O Monitoring
+## I/O Monitoring <a name="i-o-monitoring"></a>
 
 <img title="IO Monitor." src="images/io_monitor_page1_reduced.png" alt="" width="200">
 <img title="IO Monitor." src="images/io_monitor_page2_reduced.png" alt="" width="200">
