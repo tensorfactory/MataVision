@@ -540,8 +540,8 @@ ___
 
 ## I/O Monitoring <a name="i-o-monitoring"></a>
 
-<img title="IO Monitor." src="images/io_monitor_page1_reduced.png" alt="" width="200">
-<img title="IO Monitor." src="images/io_monitor_page2_reduced.png" alt="" width="200">
+<img title="IO Monitor." src="images/io_monitor_page12_reduced.png" alt="" width="700">
+
 
 When an ESP32 device is in operation mode, you can monitor the values of each I/O from the iOS app. Pressing the “I/O Monitor” button on the device setting page will open the I/O monitoring page.
 
@@ -549,7 +549,7 @@ When an ESP32 device is in operation mode, you can monitor the values of each I/
 
 # Programming
 
-<img title="IO Monitor." src="images/bottle_cap_detection_system.png" alt="" width="650">
+<img title="Programming." src="images/bottle_cap_detection_system.png" alt="" width="650">
 
 In MataVision programming, we use I/O objects to interact with external systems and Simple Logic Instructions (SLI) to integrate them into an application. We will use a hypothetical case to demonstrate how this is done. <br/>
 
