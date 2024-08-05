@@ -49,7 +49,7 @@
 
 
 # Overview
-MataVision transforms your ESP32 modules into easy-to-use vision systems, providing object classification and tracking at the edge. At its core, MataVision consists of two main components:
+MataVision transforms your ESP32 modules into easy-to-use vision systems, providing multiple windows classification and object tracking at the edge. At its core, MataVision consists of two main components:
 
 1. MataVision [Firmware](#firmware-installation): This lightweight firmware is flashed onto your ESP32-CAM or ESP32-S3 board, transforming it into a powerful vision system.
 2. MataVision [iOS App](#ios-app): This intuitive app serves as your command center, allowing you to control and program ESP32 devices.
@@ -234,6 +234,11 @@ This section will provide a step-by-step guide on how to perform all these tasks
    - [Upload Program](#upload-program).
    - [I/O Monitoring](#i-o-monitoring).
 
+___
+**NOTE**<br/>
+The default version of the MataVision app is the Basic version. This version can handle only one ESP32 device at a time. If you need to work with multiple ESP32 devices, you’ll need to upgrade to Pro, which can handle up to five ESP32 devices, or to Pro Plus, which has no maximum limit.
+___
+
 
 <br/>
 
@@ -257,10 +262,6 @@ The first line displays the ESP32 device type and version number. You can replac
 
 Setting the WiFi availability to true and entering the SSID and passphrase of your WiFi network will allow the ESP32 device to connect to it. This has two advantages. Firstly, your iOS app will now connect to the ESP32 device over your local network, and if this network has Internet access, both devices will also have Internet access. Secondly, any ESP32 devices connected to this network will also appear on the Device list page, allowing for multiple device management.
 
-___
-**NOTE**<br/>
-The standard-version iOS app does not allow listing multiple ESP32 devices. Upgrade to the pro-version to remove this restriction.
-___
 
 If your local network has Internet access, the ESP32 device will try to locate the NTP server to retrieve the current time. You can set the correct GMT and daylight offset to reflect the local time accurately.
 
