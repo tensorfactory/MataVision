@@ -385,7 +385,7 @@ Pressing the play button <img title="" src="images/peri_camera_play_btn.png" alt
 
 <br/>
 
-## Camera View <a name="camera-viewing"></a><img title="" src="images/peri_camera_play_btn.png" alt="" width="30"> 
+## Camera View <a name="camera-view"></a><img title="" src="images/peri_camera_play_btn.png" alt="" width="30"> 
 
 
 <img title="Camera viewing." src="images/camera_view_p1.png" alt="" width="200"> <img title="Camera viewing." src="images/camera_view_p2.png" alt="" width="200"> 
