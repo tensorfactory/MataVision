@@ -42,6 +42,7 @@
    - [I2C Display](#i2c-display).
    - [Motor](#motor).
    - [Firebase Realtime Database](#firebase-realtime-database).
+- [Support](#support).
 - [Privacy Policy](#privacy-policy).
 - [Terms and conditions](#terms-and-conditions).
 
@@ -1178,6 +1179,18 @@ There are three possible modes <img title="FB RTDB Modes" src="images/fb_rtdb_mo
 1. Upload & Download: In this mode, MataVision will connect to Firebase RTDB whenever the local value changes or at periodic intervals to download data.
 
 Note: If only data download is required and the data does not change frequently, it is recommended to use the “Download (monitor)” mode instead of the “Upload & Download” mode. The former mode has two advantages: 1) any changes in the remote value will be immediately downloaded, and 2) data usage occurs only when the value has changed.
+
+<br/>
+
+<br/>
+
+# Support
+
+If you have any feedbacks, questions or requests, you can directly contact us or raise it on our GitHub page https://github.com/tensorfactory/MataVision/issues.
+
+- Email: kcyee01@gmail.com
+- Telephone number: +6010-3869920 
+- Address: 11, Tingkat Ipoh 2, Ipoh Garden, 31400 Ipoh, Perak, Malaysia.
 
 <br/>
 
