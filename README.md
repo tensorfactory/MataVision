@@ -1188,7 +1188,7 @@ Note: If only data download is required and the data does not change frequently,
 
 If you have any feedbacks, questions or requests, you can directly contact us or raise it on our GitHub page https://github.com/tensorfactory/MataVision/issues.
 
-- Email: kcyee01@gmail.com
+- Email: tensorfactory@gmail.com
 - Telephone number: +6010-3869920 
 - Address: 11, Tingkat Ipoh 2, Ipoh Garden, 31400 Ipoh, Perak, Malaysia.
 
