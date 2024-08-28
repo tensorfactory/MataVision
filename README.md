@@ -42,7 +42,6 @@
    - [I2C Display](#i2c-display).
    - [Motor](#motor).
    - [Firebase Realtime Database](#firebase-realtime-database).
-- [Support](#support).
 - [Privacy Policy](#privacy-policy).
 - [Terms and conditions](#terms-and-conditions).
 
@@ -139,7 +138,7 @@ MataVision requires a minimum of 4MB flash, 500KB RAM, and 4MB PSRAM on an ESP32
 <img title="ESP32-CAM Boards" src="images/esp32_cam_boards.png" alt="" width="150"><img title="ESP32-S3 Boards" src="images/esp32_s3_boards.png" alt="" width="155">
 
 - ESP32-CAM: 4MB flash, 520KB RAM, 4MB PSRAM.
-- ESL32S3-DevkitC-1-N8R8: 8MB flash, 512KB RAM, 8MB PSRAM.
+- ESP32S3-DevkitC-1-N8R8: 8MB flash, 512KB RAM, 8MB PSRAM.
 
 <br/><br/>
 
@@ -1180,17 +1179,6 @@ There are three possible modes <img title="FB RTDB Modes" src="images/fb_rtdb_mo
 
 Note: If only data download is required and the data does not change frequently, it is recommended to use the “Download (monitor)” mode instead of the “Upload & Download” mode. The former mode has two advantages: 1) any changes in the remote value will be immediately downloaded, and 2) data usage occurs only when the value has changed.
 
-<br/>
-
-<br/>
-
-# Support
-
-If you have any feedbacks, questions or requests, you can directly contact us or raise it on our GitHub page https://github.com/tensorfactory/MataVision/issues.
-
-- Email: tensorfactory@gmail.com
-- Telephone number: +6010-3869920 
-- Address: 11, Tingkat Ipoh 2, Ipoh Garden, 31400 Ipoh, Perak, Malaysia.
 
 <br/>
 
