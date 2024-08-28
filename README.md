@@ -133,7 +133,7 @@ ___
 <br/><br/>
 
 # Supported Boards
-MataVision requires a minimum of 4MB flash, 500KB RAM, and 4MB PSRAM on an ESP32 device. Currently, we have created firmware for two boards: ESP32-CAM and ESL32S3-DevkitC-1-N8R8. If you need to run MataVision on another ESP32 module, please contact us.
+MataVision requires a minimum of 4MB flash, 500KB RAM, and 4MB PSRAM on an ESP32 device. Currently, we have created firmware for two boards: ESP32-CAM and ESP32S3-DevkitC-1-N8R8. If you need to run MataVision on another ESP32 module, please contact us.
 
 <img title="ESP32-CAM Boards" src="images/esp32_cam_boards.png" alt="" width="150"><img title="ESP32-S3 Boards" src="images/esp32_s3_boards.png" alt="" width="155">
 
