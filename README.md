@@ -16,7 +16,7 @@
       - [Camera Viewing](#camera-view).
       - [Image Capturing For Classification](#image-capturing-for-classification).
       - [Image Capturing for Object Tracking](#image-capturing-for-object-tracking).
-      - [AutoSnap](#autosnap).
+      - [AutoSnap (Beta)](#autosnap).
       - [Attach DS3231 RTC](#attach-ds3231-rtc).
 
    - Applications Development.
@@ -419,7 +419,7 @@ For object tracking, the window encompasses the entire video view. The number of
 During the object-tracking preparation stage, you will draw boundaries for the object in each image. Optionally, you can also mask out regions within the video view where object tracking is not required.
 <br/>
 
-## AutoSnap 
+## AutoSnap (Beta)<a name="autosnap">
 Capturing the perfect images for vision training can be challenging when we don’t have full control over the object’s movement, such as with a live animal. We may wait for hours only to miss the shot when we’re not looking. It would be ideal if MataVision could monitor and automatically take the best photo for us. However, doing so requires processing power and memory that the ESP32 does not have. Instead, we can ask MataVision to do the next best thing: continuously capture images and automatically decide which ones to keep.
 
 To do this, we need to tell MataVision three things on the AutoSnap Option Page:
