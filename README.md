@@ -752,6 +752,16 @@ Please see an [example of IO creation](#create-ios) in the iOS App section.
 
 ## Classification <a name="classification"></a><img title="Classification" src="images/classification_icon.png" alt="" width="50">
 
+
+**IMPORTANT NOTE**<br/>
+MataVision’s classification relies on distinguishable patterns between each class of sample images. The detection area is a square window. For accurate classification, objects must meet these criteria:
+- Distinguishable patterns between each class.
+- Patterns that remain relatively unchanged after the training process (soft materials with distorting patterns may not be classifiable).
+- Object width should be roughly equal to its length (highly oblong objects may not work well).
+- Size differences between different object classes should be relatively small.
+___
+
+
 <img title="Classification Editor" src="images/classification_editor.png" alt="" width="400">
 
 If you have captured classification images for any ESP32 devices, press the drop-down button <img title="Drop down btn" src="images/drop_down_btn.png" alt="" width="30"> to select the device. Please refer to the section on 
@@ -799,6 +809,14 @@ During operation, you can observe the ongoing classification results on the [I/O
 <br/>
 
 ## Object Tracking <a name="object-tracking"></a><img title="Object tracking" src="images/obj_tracking_icon.png" alt="" width="50">
+
+**IMPORTANT NOTE**<br/>
+For accurate tracking, the following conditions must be met:
+- Objects must have distinguishable patterns from the background.
+- Patterns on the object should remain stable after training (soft materials with distorting patterns may not work well).
+- Object width should be similar to its length (highly oblong objects, like pens, may not be suitable).
+- The background should be relatively static.
+___
 
 <img title="Obj Tracking Editor" src="images/objtrk_editor.png" alt="" width="600">
 
@@ -1203,26 +1221,36 @@ This is the MataVision License Agreement<br/>
 * 2.1 By downloading, accessing or using the MataVision, you agree to be bound by this License Agreement. If you do not accept the License Agreement, you must immediately discontinue your use of MataVision. Continued use of the MataVision will constitute acceptance of the License Agreement.
 * 2.2 If you are agreeing to be bound by the License Agreement on behalf of your employer or other entity, you represent and warrant that you have full legal authority to bind your employer or such entity to the License Agreement. If you do not have the requisite authority, you may not accept the License Agreement or use the MataVision on behalf of your employer or other entity.
 
-3) MataVision License from TensorFactory
-* 3.1 Subject to the terms of the License Agreement, TensorFactory grants you a limited, worldwide, royalty-free, non-assignable, non-exclusive, and non-sublicensable license to use the MataVision.
-* 3.2 You agree that TensorFactory own all legal right, title and interest in and to the MataVision, including any Intellectual Property Rights that subsist in the MataVision. "Intellectual Property Rights" means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. TensorFactory reserves all rights not expressly granted to you.
-* 3.3 You may not use the MataVision for any purpose not expressly permitted by the License Agreement. You may not modify, decompile, reverse engineer or disassemble any part of the MataVision.
-* 3.4 You agree that the form and nature of the MataVision that TensorFactory provides may change without prior notice to you and that future versions of the MataVision may be incompatible with files generated on previous versions of the MataVision.
-* 3.5	Nothing in the License Agreement gives you a right to use any of TensorFactory's trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.
+3) License Grant
+* 3.1 Subject to the terms and conditions of this License Agreement, TensorFactory grants you a limited, non-exclusive, non-transferable, and revocable license to use the MataVision solely for your personal or internal business purposes.
 
-4) Use of the MataVision by You
-* 4.1 You agree to use the MataVision only for purposes that are permitted by (a) the License Agreement and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions.
-* 4.2 You agree that if you use the MataVision on general public persons, you will protect the privacy and legal rights of those persons.
-* 4.3 You agree that you are solely responsible for (and that TensorFactory has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through MataVision, and for the consequences of your actions (including any loss or damage which TensorFactory may suffer) by doing so.
-* 4.4 You agree that you are solely responsible for (and that TensorFactory has no responsibility to you or to any third party for) any breach of your obligations under the License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which TensorFactory or any third party may suffer) of any such breach.
+4) Restrictions
+* 4.1 You shall not:
+   - Modify, adapt, translate, or create derivative works based on the MataVision.
+   - Reverse engineer, decompile, or disassemble the MataVision, except to the extent permitted by applicable law.
+   - Rent, lease, loan, resell, sublicense, distribute, or otherwise transfer the MataVision to any third party.
+   - Use the MataVision for any unlawful or illegal activity.
 
-5) DISCLAIMER OF WARRANTIES
-* 5.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE MATAVISION IS AT YOUR SOLE RISK AND THAT THE APPLICATION IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND FROM TENSORFACTORY.
-* 5.2 YOUR USE OF THE MATAVISION IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
-* 5.3 TENSORFACTORY FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+5) Permitted Use
+* 5.1 Notwithstanding the restrictions in Section 4.1, you are permitted to use the MataVision to automate equipment and processes for your customers, provided that such use is in accordance with the terms of this License Agreement.
 
-6) LIMITATION OF LIABILITY
-* 6.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT TENSORFACTORY SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT TENSORFACTORY HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.
+6) Ownership
+* 6.1 The MataVision and all intellectual property rights therein are and shall remain the exclusive property of TensorFactory. This License Agreement does not convey to you any rights of ownership in or related to the MataVision.
 
-7) Indemnification
-* 7.1 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless TensorFactory from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from (a) your use of the MATAVISION that infringes any copyright, trademark, trade secret, trade dress, patent or other intellectual property right of any person or defames any person or violates their rights of publicity or privacy, and (b) any non-compliance by you with the License Agreement.
+7) Termination
+* 7.1 This License Agreement is effective until terminated. Your rights under this License Agreement will terminate automatically without notice from TensorFactory if you fail to comply with any term(s) of this License Agreement. Upon termination, you shall cease all use of the MataVision and destroy all copies, full or partial, of the MataVision.
+
+8) Limitation of Liability
+* 8.1 To the maximum extent permitted by applicable law, in no event shall TensorFactory be liable for any special, incidental, indirect, or consequential damages whatsoever arising out of the use of or inability to use the MataVision, even if TensorFactory has been advised of the possibility of such damages. This includes, but is not limited to, any loss of data, loss of profits, or business interruption.
+
+9) Disclaimer of Warranties
+* 9.1 The MataVision and its documentation are provided "as is" without warranty of any kind, either express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. TensorFactory does not warrant that the MataVision or its documentation will be error-free or that any errors will be corrected. You acknowledge that the use of the MataVision and its documentation is at your sole risk.
+
+10) Compatibility
+* 10.1 While TensorFactory strives to maintain backward compatibility with each new version of MataVision, there may be instances where files, works, or designs created with previous versions are not fully compatible with newer versions. Users are advised to verify compatibility before updating and to retain backups of their work.
+
+11) Governing Law
+* 11.1 This License Agreement shall be governed by and construed in accordance with the laws of Malaysia, without regard to its conflict of laws principles. However, if you are located outside of Malaysia, local laws may apply to certain aspects of this agreement.
+
+12) Entire Agreement
+* 12.1 This License Agreement constitutes the entire agreement between you and TensorFactory with respect to the use of the MataVision and supersedes all prior or contemporaneous understandings regarding such subject matter.
