@@ -214,7 +214,7 @@ After successfully flashing firmware to the ESP32 device, hard reboot it. If eve
 
 <img title="MataVision app's icon." src="images/app_icon.png" alt="" width="130">
 
-The MataVision iOS app is available for download on the Apple App Store. This app serves as your central hub for everything related to MataVision, from managing ESP32 devices to development, debugging, and deployment of your vision applications.
+The MataVision iOS app is available for download on the [Apple App Store](https://apps.apple.com/app/matavision/id6479574809). This app serves as your central hub for everything related to MataVision, from managing ESP32 devices to development, debugging, and deployment of your vision applications.
 
 This section will provide a step-by-step guide on how to perform all these tasks.
 - ESP32 Devices Management.   
